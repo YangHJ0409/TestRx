@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <Button
+                android:id="@+id/test01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Kotlin:Coding"
+                />
+            <Button
+                android:id="@+id/test02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Java:Coding"
+                />
+
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FF0000"/>
+            <Button
+                android:id="@+id/activity_01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Activity:First:Handler 메모리 누수 확인"
+                />
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FF0000"/>
+            <Button
+                android:id="@+id/btn01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Test01:Create, Combine 1형태"
+                />
+            <Button
+                android:id="@+id/btn02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Test02:Create, Combine 2형태"
+                />
+            <Button
+                android:id="@+id/btn03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Test03:Create, Combine 3형태"
+                />
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FF0000"/>
+            <Button
+                android:id="@+id/btn20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Test20:Retrofit2 연결"
+                />
+
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FF0000"/>
+            <Button
+                android:id="@+id/btn30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Test30:AsyncTask 대처"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

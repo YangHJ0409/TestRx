@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="muViewModel"
+            type="com.zz.yang.test.rx.MVVMViewModel2" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MVVMActivity2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <Button
+                android:id="@+id/btn01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:onClick="@{()->muViewModel.updateNext()}"
+                android:text="@{muViewModel.getName()}"
+                />
+
+            <Button
+                android:id="@+id/btn02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn01"
+                android:layout_marginTop="6dp"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:onClick="@{()->muViewModel.updateLast()}"
+                android:text="@{muViewModel.getName()}"
+                />
+
+            <TextView
+                android:id="@+id/text01"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/btn02"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:textStyle="normal"
+                android:text="@{muViewModel.getNumber()}"
+                android:background="@color/black"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="#FF0000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:onClick="@{()->muViewModel.addPriceBuilding()}"
+                android:text="돈추가"
+                />
+
+            <Button
+                android:id="@+id/btn12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:onClick="@{()->muViewModel.priceReset()}"
+                android:text="리셋"
+                />
+
+            <TextView
+                android:id="@+id/text11"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:text="@{muViewModel.getPriceSum()}"
+                android:background="#38B379"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
