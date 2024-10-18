@@ -8,7 +8,9 @@ import android.os.Bundle
 import android.os.Looper
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.zz.yang.test.rx.algorithm.AlgorithmActivity
 import com.zz.yang.test.rx.retrofit2.GithubClient
+import com.zz.yang.test.rx.struct.StructActivity
 import io.reactivex.Observable
 import io.reactivex.Observer
 import io.reactivex.Scheduler
@@ -40,7 +42,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        findViewById<Button>(R.id.test01).setOnClickListener {
+        val structBtn = findViewById<Button>(R.id.btn_sturuct)
+        structBtn.setOnClickListener {
+            val intent = Intent(this, StructActivity::class.java)
+            startActivity(intent)
+        }
+
+        val test01 = findViewById<Button>(R.id.test01)
+        test01.text = "알고리즘::" + "플로이드"
+        test01.setOnClickListener {
 //            val kotlinTest = KotlinTest() //BFS
 //            val kotlinTest = KotlinTest01() //DFS
 //            val kotlinTest = KotlinTest02() //하노이
@@ -52,9 +62,9 @@ class MainActivity : AppCompatActivity() {
 //            val kotlinTest = KotlinTest08() //DP
 //            val kotlinTest = KotlinTest09() //MST
 //            val kotlinTest = KotlinTest10() // 다익스트라
-//            val kotlinTest = KotlinTest11() //플로이드
+            val kotlinTest = KotlinTest11() //플로이드
 //            kotlinTest.main(emptyArray());
-            val kotlinTest = KotlinTest12() //오답노트
+//            val kotlinTest = KotlinTest12() //오답노트
             kotlinTest.main(emptyArray())
 //            kotlinTest.solution(intArrayOf(1, 4, 2, 5, 3))
 
@@ -137,8 +147,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         //08월
-        findViewById<Button>(R.id.btn20).setOnClickListener {
-            testBtn20()
+        val btn20 = findViewById<Button>(R.id.btn20)
+        btn20.text = "알고리즘 Activity"
+        btn20.setOnClickListener {
+//            testBtn20()
+            val intent = Intent(this, AlgorithmActivity::class.java)
+            startActivity(intent)
         }
 
         findViewById<Button>(R.id.btn30).setOnClickListener {

@@ -9,6 +9,11 @@ import java.util.LinkedList
 import java.util.Queue
 import kotlin.math.abs
 
+/**
+ * Coroutine 테스트
+ * RxKotlin 테스트
+ * 각종 알고리즘
+ */
 class KotlinTest12 {
     val LOG = true
 
@@ -28,29 +33,6 @@ class KotlinTest12 {
         println(answer.slice(0 until 5 step 2)) //024
         println(answer.slice(5 downTo(0))) //543210
         println(answer.slice(5 downTo(0) step 2)) //531
-
-        //
-        println("케이스1: 캐릭터 20개를 해금 한 상태 ===================")
-        val P = 0.2 //궁극무기 드랍확률 20%
-        var N = 20 //'궁극무기를 소유하고 있지 않은', 모든 캐릭터(해금여부상관없음)
-        var n = 20 //해금한 캐릭터 중 궁극무기를 가지고 있지 않은 캐릭터의 갯수
-        for(i in 1 .. 20) {
-            val result = P * n / N
-            println("$i 번째 궁극무기를 실제로 얻을 확률: $P * ($n / $N) = $result")
-            n--
-            N--
-        }
-
-        println("케이스2: 캐릭터 10개를 해금 한 상태 ===================")
-        N = 20 //'궁극무기를 소유하고 있지 않은', 모든 캐릭터(해금여부상관없음)
-        n = 10 //해금한 캐릭터 중 궁극무기를 가지고 있지 않은 캐릭터의 갯수
-        for(i in 1 .. 10) {
-            val result = P * n / N
-            println("$i 번째 궁극무기를 실제로 얻을 확률: $P * ($n / $N) = $result")
-            n--
-            N--
-        }
-
     }
 
     fun solution(my_string: String, s: Int, e: Int): String {

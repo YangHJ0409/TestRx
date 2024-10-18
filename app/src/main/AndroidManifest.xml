@@ -15,6 +15,12 @@
         android:theme="@style/Theme.TestRx"
         tools:targetApi="31">
         <activity
+            android:name=".struct.StructActivity"
+            android:exported="false" />
+        <activity
+            android:name=".algorithm.AlgorithmActivity"
+            android:exported="false" />
+        <activity
             android:name=".MVVMActivity2"
             android:exported="false" />
         <activity

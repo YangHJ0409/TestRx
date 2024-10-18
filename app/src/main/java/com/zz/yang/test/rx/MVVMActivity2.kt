@@ -23,7 +23,6 @@ class MVVMActivity2 : AppCompatActivity() {
 //        binding = ActivityMvvmactivity2Binding.inflate(layoutInflater)
 //        setContentView(binding.root)
 
-
         viewModel = ViewModelProvider(this)[MVVMViewModel2::class.java]//viewModel
         binding = DataBindingUtil.setContentView(this, R.layout.activity_mvvmactivity2)
         binding.muViewModel = viewModel
